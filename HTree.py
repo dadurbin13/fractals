@@ -83,7 +83,6 @@ def draw_fractal(middle, line_width, line_height, depth):
         update_fps()
         pygame.display.update()
 
-
         depth -= 1
         line_height /= 2
         line_width /= 2
