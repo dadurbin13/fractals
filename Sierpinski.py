@@ -73,7 +73,7 @@ def get_right(top, hypotenuse):
     return (top[0] + hypotenuse / 2, math.sqrt(3) * hypotenuse / 2)
 
 
-def draw_fractal(top, hypotenuse, color, depth):
+def draw_fractal(top, hypotenuse, color, depth): # TODO: Still does not work with any depth in the fractal
     if not get_event():
         return False
     elif depth <= 0:
