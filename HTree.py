@@ -7,9 +7,9 @@ pygame.display.set_caption("H-Tree Fractal")
 WINDOW = pygame.display.set_mode(display=(pygame.display.get_num_displays() - 1))
 
 # Set constants
-FPS = 360
+FPS = 10
 LINE_WIDTH = 1  # generally, this should be an odd number
-FRACTAL_DEPTH = 8
+FRACTAL_DEPTH = 5
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 SCREEN_WIDTH = pygame.display.get_window_size()[0]
