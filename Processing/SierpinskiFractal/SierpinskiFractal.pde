@@ -1,8 +1,8 @@
-float len = 2000;
 int depth = 7; // Set your desired depth level here
+float margin = 10; // Margin from the top and bottom of the screen
 
 void settings() {
-    fullScreen();
+    fullScreen(); // Set the sketch to full-screen mode
 }
 
 void setup () {
@@ -12,9 +12,16 @@ void setup () {
 
 void draw() {
  background(255);
- float adjustedX = width / 2 - len / 2;
- float adjustedY = height / 2 + sin(PI / 3) * len / 2;
- divide(adjustedX, adjustedY, len, 1, depth);
+
+ // Adjust the size of the triangle to fit the screen with margins
+ float availableHeight = height - 2 * margin;
+ float len = 2 * availableHeight / sqrt(3); // Adjusted length of the base of the triangle
+
+ // Calculate the starting position
+ float startX = (width - len) / 2;
+ float startY = height - margin;
+
+ divide(startX, startY, len, 1, depth);
 }
 
 void divide(float x, float y, float l, int lvl, int max) {
